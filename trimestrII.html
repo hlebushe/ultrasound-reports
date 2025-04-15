@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Trimestrul II(III)</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+<div class="main-border">
+    <div class="row">
+        <div class="inline-left"><img src="images/logo.png" height="100" width="100" alt="logo"
+                                      style="-webkit-filter:grayscale(1)"></div>
+        <div class="inline-center"><h3 class="move-down">Cabinet medical de ecografie № 203</h3>Echipament: General
+            Electric Versana Premier<br>e-mail: svetlana.ciuclea@gmail.com
+        </div>
+        <div class="inline-right"><h4 class="top-right">IMSP CS Strășeni</h4>str. Ștefan cel Mare 105, <br>or. Strășeni,
+            Republica Moldova<br>Telefon: (+373) 237 22862
+        </div>
+    </div>
+    <hr style="background-color:black; border:10; height:2px"/>
+    <h3 class="title">Raport de Examinare<br>Ecografia în trimestrul II(III) de sarcină<br> cu evaluare biometrică și
+        morfologică</h3>
+    <br>
+    <div class="inline-left">Nume, Prenume:
+        <form>
+            <input type="text" maxlength="100" size="70" name="bpm">
+        </form>
+    </div>
+    <div class="inline-right">Anul de naștere:
+        <form>
+            <input type="text" class="mm4" name="bpm">
+        </form>
+    </div>
+    <br>
+    <div class="inline-left">Adresa:
+        <form>
+            <input type="text" maxlength="100" size="70" name="bpm">
+        </form>
+    </div>
+    <div class="inline-right">Data de examinare: <input id="date" name="date" size="8" style="width:75px" tabindex="-1">
+    </div>
+    <br>
+    <div class="inline-left">DUM: <input type="text" maxlength="10" size="10" name="bpm"></div>
+    <div class="inline-right">Vârsta gestațională (SA+Z):
+        <b>-LMP-
+            <form><input class="mm2" type="text" maxlength="2" size="2" name="BPD-sapt"></form>
+            SA+
+            <form><input class="mm1" type="text" name="BPD-sapt"></form>
+            zile</b><br>
+        <b>-AUA-
+            <form><input class="mm2" type="text" name="BPD-sapt"></form>
+            SA+
+            <form><input class="mm1" type="text" name="BPD-sapt"></form>
+            zile</b></div>
+    <br><br>
+    <div class="inline-left">Sarcină
+        <select>
+            <option value="unică">unică</option>
+            <option value="multiplă">multiplă</option>
+        </select>
+        <form>
+            <input type="text" maxlength="100" size="90" name="bpm">
+        </form>
+    </div>
+    <br>
+    <div class="inline-left">Bătăile cordului fetal:
+        <form>
+            <input class="mm3" type="text" maxlength="3" size="3" name="bpm">
+        </form>
+        bpm,
+        <select id="test">
+            <option value="ritmice">ritmice</option>
+            <option value="aritmice">aritmice</option>
+        </select>
+    </div>
+    <br>
+    <div class="inline-left">Prezentație:
+        <select>
+            <option value="cefalică">cefalică</option>
+            <option value="pelvină">pelvină</option>
+            <option value="podalică">podalică</option>
+        </select>
+    </div>
+    <br>
+    <div class="inline-left">Mișcările fetale:
+        <select>
+            <option value="active">active</option>
+            <option value="absente">absente</option>
+        </select>
+    </div>
+    <br>
+    <div class="inline-left">Ecografie:
+        <select>
+            <option value="transabdominal">transabdominal</option>
+            <option value="endovaginal acordat">endovaginal acordat</option>
+        </select>
+    </div>
+    <br>
+    <div class="inline-left">Condiții technice <select id="conditii" onkeyup="watchDog()" onclick="watchDog()">
+        <option value="bune">bune</option>
+        <option value="limitate">limitate prin:</option>
+    </select>
+        <form id="watchdog" style="display:none">
+            <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/>
+                poziție fetală nefavorabilă; </label>
+            <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/>
+                placenta localizată anterior; </label>
+            <label><input type="checkbox" name="exces de țesut adipos" value="exces de țesut adipos"/> exces de țesut
+                adipos </label>
+        </form>
+    </div>
+    <br>
+    <h4 class="divider">BIOMETRIE:</h4>
+    <div class="inline-left">Diametrul biparietal (BPD)</div>
+    <div class="padding-right">
+        <form><input class="mm5" type="text" maxlength="5" size="5" name="BPD"></form>
+        mm, corespunde
+        [
+        <form><input class="mm2" type="text" maxlength="2" size="2" name="BPD-sapt"></form>
+        săptămîni amenoree +
+        <form><input class="mm1" type="text" maxlength="1" size="1" name="BPD-zile"></form>
+        zile ]
+    </div>
+    <br>
+    <div class="inline-left">Circumferența craniană (HC)</div>
+    <div class="padding-right">
+        <form><input class="mm5" type="text" maxlength="5" size="5" name="HC"></form>
+        mm, corespunde
+        [
+        <form><input class="mm2" type="text" maxlength="2" size="2" name="HC-sapt"></form>
+        săptămîni amenoree +
+        <form><input class="mm1" type="text" maxlength="1" size="1" name="HC-zile"></form>
+        zile ]
+    </div>
+    <br>
+    <div class="inline-left">Circumferența abdominală (AC)</div>
+    <div class="padding-right">
+        <form><input class="mm5" type="text" maxlength="5" size="5" name="AC"></form>
+        mm, corespunde
+        [
+        <form><input class="mm2" type="text" maxlength="2" size="2" name="AC-sapt"></form>
+        săptămîni amenoree +
+        <form><input class="mm1" type="text" maxlength="1" size="1" name="AC-zile"></form>
+        zile ]
+    </div>
+    <br>
+    <div class="inline-left">Lungimea femurului (FL)</div>
+    <div class="padding-right">
+        <form><input class="mm5" type="text" maxlength="5" size="5" name="FL"></form>
+        mm, corespunde
+        [
+        <form><input class="mm2" type="text" maxlength="2" size="2" name="FL-sapt"></form>
+        săptămîni amenoree +
+        <form><input class="mm1" type="text" maxlength="1" size="1" name="FL-zile"></form>
+        zile ]
+    </div>
+    <br>
+    <div class="inline-left">MPF (HANDLOCK)</div>
+    <div class="padding-right">
+        <form><input class="mm4" type="text" maxlength="5" size="5" name="MPF"></form>
+        gr, &nbsp;&nbsp; corespunde
+        [
+        <form><input class="mm2" type="text" maxlength="2" size="2" name="MPF-sapt"></form>
+        săptămîni amenoree +
+        <form><input class="mm1" type="text" maxlength="1" size="1" name="MPF-zile"></form>
+        zile ]
+    </div>
+    <br>
+    <h4 class="divider">ASPECT SONOGRAFIC AL ANATOMIEI FETALE:</h4>
+    <i>Craniul fetal: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - cu aspect normal <br>
+
+    <i>Creierul fetal: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- linie mediana cu aspect
+    normal <br>
+    <div class="padding-right-anatomie">
+        - ventriculi cerebrali simetrici cu dimensiuni normale, cu plexuri coroide cu aspect normal<br>
+        - thalamus, hipothalamus cu aspect normal<br>
+        - circumvoluțiuni cerebrale în formare<br>
+        - cerebel cu diametrul transvers
+        <form>
+            <input class="mm4" type="text" size="4" name="cerebel">
+        </form>
+        mm, de aspect normal, cisterna magna
+        <form>
+            <input class="mm3" type="text" size="3" name="magna">
+        </form>
+        mm
+    </div>
+    <i>Fața fetală: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - orbite
+    simetrice, globi oculari vizibili
+    <div class="padding-right-anatomie">
+        - nasul de aspect normal<br>
+        - buza superioară cu aspect normal
+    </div>
+    <i>Coloana vertebrală: </i> &nbsp; - frontal și sagital cu aspect normal
+    <div class="padding-right-anatomie">
+        - regiunea subnucală normală
+    </div>
+    <i>Toracele fetal: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - forma de aspect normal
+    <div class="padding-right-anatomie">
+        - arii pulmonare cu aspect normal
+    </div>
+    <i>Cordul fetal: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
+    situs-supradiafragmatic, axul mare orientat spre stânga
+    <div class="padding-right-anatomie">
+        - structura - 4-camere cu cavități simetrice, valve atrio-ventriculare cu aspect normal <br>
+        - incrucișarea marelor vase la baza inimii <br>
+        - imaginea 3 vase și traheea aspect normal
+    </div>
+    <i>Abdomenul fetal: </i> &nbsp;&nbsp;&nbsp;&nbsp; - peretele abdominal intact
+    <div class="padding-right-anatomie">
+        - inserția abdominală a cordonului ombilical <br>
+        - stomacul (stânga subdiafragmatic), ficatul situat în dreapta <br>
+        - ansele intestinale normale <br>
+        - vezica urinară plină <br>
+        - rinichii cu aspect normal bilateral
+    </div>
+    <i>Membrele: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - membre
+    superioare tre segmente
+    <div class="padding-right-anatomie">
+        - membre inferioare trei segmente <br>
+        - unghi picior-gamba aspect normal
+    </div>
+    <i>Organele genitale externe: </i>
+    <select>
+        <option value="feminin">morfologie vulva (feminin) &#9792;</option>
+        <option value="masculin">scrot și penis (masculin) &#9794;</option>
+        <option value="nedeterminat">nu se determină la moment</option>
+        <option value="nudoresc">părinții nu doresc șă cunoască sexul</option>
+    </select>
+    - aspect normal
+
+    <h4 class="divider">ANEXELE FETALE:</h4>
+    <i>Placenta: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    - localizare:
+    <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/> peretele
+        posterior; </label>
+    <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> peretele
+        anterior; </label>
+    <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> fundic;
+    </label>
+    <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/> lateral pe
+        stânga; </label>
+    <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> lateral pe
+        dreapta; <br> </label>
+    <div class="padding-right-anatomie">
+        &nbsp;&nbsp; cu extremitatea distală situată la
+        <form>
+            <input class="mm3" type="text" name="cerebel">
+        </form>
+        mm față de orificiul intern al colului uterin
+        <br>
+        - grad de maturizare Grannum -
+        <select>
+            <option value="feminin">0</option>
+            <option value="masculin">I</option>
+            <option value="nedeterminat">II</option>
+            <option value="nudoresc">III</option>
+        </select>
+        <br>
+        - aspect normal
+        <br>
+        - anomalii structurale
+        <select>
+            <option value="feminin">absente</option>
+            <option value="masculin"></option>
+        </select>
+        <form>
+            <input type="text" maxlength="1000" size="60" name="bpm">
+        </form>
+    </div>
+
+    <i>Cordonul ombilical: </i> &nbsp;&nbsp; - existența a 3 vase (2 artere și o venă)
+    <div class="padding-right-anatomie">
+        - inserția placentară
+        <select>
+            <option value="feminin">centrală</option>
+            <option value="masculin">marginală</option>
+            <option value="nedeterminat">vasa praevia</option>
+        </select>
+    </div>
+    <i>Lichid amniotic: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - indice amniotic
+    <form>
+        <input class="mm3" type="text" name="HC">
+    </form>
+    mm
+    <div class="padding-right-anatomie">
+        - aspect
+        <select>
+            <option value="feminin">omogen</option>
+            <option value="masculin">cu particuli suspendate</option>
+        </select>
+    </div>
+    <i>Colul uterin: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
+    <form>
+        <input class="mm3" type="text" name="HC">
+    </form>
+    mm, cu orificiul intern închis
+
+    <h4 class="divider">CONCLUZIE SONOGRAFICĂ:</h4>
+    <b>Creșterea fetală în limitele normalității. LA normal.
+        <form>
+            <input type="text" maxlength="1000" size="55" name="bpm">
+        </form>
+    </b>
+    <br>
+    Biometria fetală corespunde vârstei gestaționale de
+    <form>
+        <input class="mm2" type="text" name="BPD-sapt">
+    </form>
+    săptămîni amenoree +
+    <form>
+        <input class="mm1" type="text" name="BPD-zile">
+    </form>
+    zile
+    <br>
+    Anomalii evidente nu se constată.
+    <br>
+    Mama relatează mișcări fetale bune, care pot fi vizualizate și în timpul scanării.
+    <br>
+    Cuplul este conștient de faptul că singură ecografia nu poate exclude toate sindroamele genetice și anomaliile
+    cromozomiale.
+    <br>
+    <br>
+
+    În prealabil, consințământul verbal a fost obținut.<br>
+
+    <h4 class="divider">RECOMANDĂRI:</h4>
+    <textarea name="recomandari" rows="5" cols="118"></textarea>
+    <br>
+    Ecografia efectuată de: <br>
+    <b>Dr. Andrienco Svetlana</b><br>
+    Medic ecograf - imagistică medicală categoria superioară
+    <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
+
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+    var today = dd + '/' + mm + '/' + yyyy;
+    document.getElementById('date').value = today;
+</script>
+<script>
+    function watchDog() {
+        conditii = document.getElementById("conditii");
+        if (conditii.selectedIndex == 0) {
+            document.getElementById("watchdog").style.display = 'none';
+        } else {
+            document.getElementById("watchdog").style.display = 'initial';
+        }
+    }
+
+    function printPage() {
+        //hide button
+        var button = document.getElementById('printButton');
+        button.style.display = 'none';
+        //hide borders and arrows
+        var input = document.getElementsByTagName("input");
+        for (i = 0; i < input.length; i++) {
+            input[i].style.border = 'none';
+        }
+        var input = document.getElementsByTagName("input");
+        for (i = input.length - 1; i >= 0; i--) {
+            if (input[i].type == 'checkbox') {
+                if (input[i].checked == false) {
+                    input[i].parentNode.parentNode.removeChild(input[i].parentNode);
+                } else {
+                    input[i].parentNode.removeChild(input[i]);
+                }
+            }
+        }
+        var select = document.getElementsByTagName("select");
+        for (i = select.length - 1; i >= 0; i--) {
+            var r = select[i];
+            r.parentNode.replaceChild(document.createTextNode(r.options[r.selectedIndex].innerHTML), r);
+        }
+        var select = document.getElementsByTagName("textarea");
+        for (i = 0; i < select.length; i++) {
+            select[i].setAttribute("style", "border:none; resize:none");
+        }
+        window.print();
+    }
+</script>
+</body>
+</html>

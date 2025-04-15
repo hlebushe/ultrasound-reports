@@ -1,0 +1,122 @@
+h4 {
+	-webkit-print-color-adjust: exact;
+}
+
+select, textarea, form {
+	display: inline;
+}
+
+textarea {
+	margin-top:0px;
+}
+
+label {
+	font-weight:normal;
+}
+
+.mm1 {
+	width: 12px;
+	height: 20px;
+	text-align: right;
+}
+
+.mm2 {
+	width: 20px;
+	height: 20px;
+	text-align: right;
+}
+
+.mm3 {
+	width: 28px;
+	height: 20px;
+	text-align: right;
+}
+
+.mm4 {
+	width: 36px;
+	height: 20px;
+	text-align: right;
+}
+
+.mm5 {
+	width: 40px;
+	height: 20px;
+	text-align: right;
+}
+
+.mm11 {
+	width: 80px;
+	height: 20px;
+	text-align: right;
+}
+
+input {
+	height:20px;
+}
+
+.main-border {
+	border: 20px solid #FFFFFF;
+}
+
+.divider {
+	background-color:#F2F2F2;
+	margin-top:40px;
+	font-weight: bold;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.inline-left {
+	float: left;
+	display: inline;
+}
+
+.inline-right {
+	display: inline;
+	text-align: right;
+	float:right;
+}
+
+.inline-center {
+	float:left;
+	padding-left: 40px;
+	text-align: center;
+}
+
+
+.top-right {
+	margin-top: 0px;
+	text-align: right;
+}
+
+.move-down {
+	margin-top:0px;
+}
+
+
+.padding-right {
+	float: right;
+	padding-right: 50px;
+	display: inline;
+}
+
+.padding-right-no-sapt {
+	float:right;
+	padding-right: 456px;
+	display: inline;
+}
+
+.padding-right-anatomie {
+	float: center;
+	padding-left: 133px;
+}
+
+.padding-center-anatomie {
+	float:left;
+	padding-left: 300px;
+	text-align: center;
+	display: inline;
+}
