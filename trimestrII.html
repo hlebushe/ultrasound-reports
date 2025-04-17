@@ -9,6 +9,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/template.css" rel="stylesheet">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body style="-webkit-print-color-adjust:exact;">
 <div class="main-border">
@@ -42,7 +45,8 @@
             <input type="text" maxlength="100" size="70" name="bpm">
         </form>
     </div>
-    <div class="inline-right">Data de examinare: <input id="date" name="date" size="8" style="width:75px" tabindex="-1">
+    <div class="inline-right">Data de examinare: <input id="currentDate" name="date" size="8" style="width:75px"
+                                                        tabindex="-1">
     </div>
     <br>
     <div class="inline-left">DUM: <input type="text" maxlength="10" size="10" name="bpm"></div>
@@ -101,11 +105,12 @@
         </select>
     </div>
     <br>
-    <div class="inline-left">Condiții technice <select id="conditii" onkeyup="watchDog()" onclick="watchDog()">
-        <option value="bune">bune</option>
-        <option value="limitate">limitate prin:</option>
-    </select>
-        <form id="watchdog" style="display:none">
+    <div class="inline-left">Condiții technice
+        <select id="technicalConditionsSelect">
+            <option value="bune">bune</option>
+            <option value="limitate">limitate prin:</option>
+        </select>
+        <form id="limitedTechnicalConditionsForm" style="display:none">
             <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/>
                 poziție fetală nefavorabilă; </label>
             <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/>
@@ -167,7 +172,7 @@
         [
         <form><input class="mm4" type="text" maxlength="5" size="5" name="MPF-sapt"></form>
         percentile
-         ]
+        ]
     </div>
     <br>
     <h4 class="divider">ASPECT SONOGRAFIC AL ANATOMIEI FETALE:</h4>
@@ -181,7 +186,7 @@
         - circumvoluțiuni cerebrale în formare<br>
         - cerebel cu diametrul transvers
         <form>
-            <input class="mm4" type="text" size="4" name="cerebel">
+            <input class="mm4" type="text" size="4">
         </form>
         mm, de aspect normal, cisterna magna
         <form>
@@ -249,7 +254,7 @@
     <div class="padding-right-anatomie">
         &nbsp;&nbsp; cu extremitatea distală situată la
         <form>
-            <input class="mm3" type="text" name="cerebel">
+            <input class="mm3" type="text">
         </form>
         mm față de orificiul intern al colului uterin
         <br>
@@ -328,6 +333,7 @@
 
     În prealabil, consințământul verbal a fost obținut.<br>
     <br>
+    <div style="width: 900px; height: 1px"></div>
     <textarea name="recomandari" rows="0" cols="118"></textarea>
     <br>
     Ecografia efectuată de: <br>
@@ -336,64 +342,5 @@
     <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
 
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1;
-    var yyyy = today.getFullYear();
-    if (dd < 10) {
-        dd = '0' + dd
-    }
-    if (mm < 10) {
-        mm = '0' + mm
-    }
-    var today = dd + '/' + mm + '/' + yyyy;
-    document.getElementById('date').value = today;
-</script>
-<script>
-    function watchDog() {
-        conditii = document.getElementById("conditii");
-        if (conditii.selectedIndex == 0) {
-            document.getElementById("watchdog").style.display = 'none';
-        } else {
-            document.getElementById("watchdog").style.display = 'initial';
-        }
-    }
-
-    function printPage() {
-        //hide button
-        var button = document.getElementById('printButton');
-        button.style.display = 'none';
-        //hide borders and arrows
-        var input = document.getElementsByTagName("input");
-        for (i = 0; i < input.length; i++) {
-            input[i].style.border = 'none';
-        }
-        var input = document.getElementsByTagName("input");
-        for (i = input.length - 1; i >= 0; i--) {
-            if (input[i].type == 'checkbox') {
-                if (input[i].checked == false) {
-                    input[i].parentNode.parentNode.removeChild(input[i].parentNode);
-                } else {
-                    input[i].parentNode.removeChild(input[i]);
-                }
-            }
-        }
-        var select = document.getElementsByTagName("select");
-        for (i = select.length - 1; i >= 0; i--) {
-            var r = select[i];
-            r.parentNode.replaceChild(document.createTextNode(r.options[r.selectedIndex].innerHTML), r);
-        }
-        var select = document.getElementsByTagName("textarea");
-        for (i = 0; i < select.length; i++) {
-            select[i].setAttribute("style", "border:none; resize:none");
-        }
-        window.print();
-    }
-</script>
 </body>
 </html>
