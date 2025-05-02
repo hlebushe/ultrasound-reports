@@ -14,6 +14,10 @@ label {
 	font-weight:normal;
 }
 
+.text-medium {
+	font-size: 18px;
+}
+
 .mm1 {
 	width: 12px;
 	height: 20px;
@@ -56,7 +60,7 @@ label {
 	text-align: right;
 }
 
-input {
+input:not([type="checkbox"]) {
 	height:20px;
 }
 
@@ -66,8 +70,9 @@ input {
 
 .divider {
 	background-color:#F2F2F2;
-	margin-top:40px;
+	/*margin-top:25px;*/
 	font-weight: bold;
+	margin-bottom: 0;
 }
 
 .title {
@@ -76,7 +81,7 @@ input {
 }
 
 .inline-left {
-	float: left;
+	/*float: left;*/
 	display: inline;
 }
 
@@ -92,7 +97,6 @@ input {
 	text-align: center;
 }
 
-
 .top-right {
 	margin-top: 0px;
 	text-align: right;
@@ -101,7 +105,6 @@ input {
 .move-down {
 	margin-top:0px;
 }
-
 
 .padding-right {
 	float: right;

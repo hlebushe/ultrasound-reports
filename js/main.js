@@ -34,7 +34,7 @@ function printPage() {
     // hide select and add text value of select instead of it
     $('select').each(function() {
         var selectedValue = $(this).find('option:selected').text(); // Get the selected text value
-        var textNode = $('<span>').addClass('replacedSelectText').text(selectedValue); // Create a span with class and selected value
+        var textNode = $('<span>').addClass('replacedSelectText').addClass('text-medium').text(selectedValue); // Create a span with class and selected value
 
         $(this).hide(); // Hide the select element
         $(this).after(textNode); // Insert the span after the select element
@@ -43,7 +43,7 @@ function printPage() {
     // hide input and add text value of input instead of it
     $('input:not([type="checkbox"])').each(function() {
         var inputValue = $(this).val();
-        var textNode = $('<span>').addClass('replacedInputText').text(inputValue);
+        var textNode = $('<span>').addClass('replacedInputText').addClass('text-medium').text(inputValue);
 
         $(this).hide(); // Hide the input element
         $(this).after(textNode); // Insert the span after the input element
@@ -62,7 +62,7 @@ function printPage() {
     // hide borders and resize of textarea elements
     $('textarea').each(function() {
         var inputValue = $(this).val();
-        var textNode = $('<span>').addClass('replacedTextareaText').text(inputValue);
+        var textNode = $('<span>').addClass('replacedTextareaText').addClass('text-medium').text(inputValue);
 
         $(this).hide(); // Hide the textarea element
         $(this).after(textNode); // Insert the span after the input element
