@@ -18,48 +18,6 @@ label {
 	font-size: 18px;
 }
 
-.mm1 {
-	width: 12px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm2 {
-	width: 20px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm3 {
-	width: 28px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm4 {
-	width: 36px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm5 {
-	width: 40px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm6 {
-	width: 42px;
-	height: 20px;
-	text-align: right;
-}
-
-.mm11 {
-	width: 80px;
-	height: 20px;
-	text-align: right;
-}
-
 input:not([type="checkbox"]) {
 	height:20px;
 }
@@ -120,7 +78,7 @@ input:not([type="checkbox"]) {
 
 .padding-right-anatomie {
 	float: center;
-	padding-left: 133px;
+	padding-left: 165px;
 }
 
 .padding-center-anatomie {
