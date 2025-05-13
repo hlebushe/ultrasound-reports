@@ -28,6 +28,12 @@ function getCurrentDate() {
 }
 
 function printPage() {
+    // change title (title will be used as filename when saving to pdf from browser)
+    var patientFullName = $('#patientFullName').val();
+    var currentDate = getCurrentDate().replaceAll('/', '.');
+    var pageName = window.location.pathname.split("/").pop().replace(".html", "");
+    document.title = patientFullName + " - " + currentDate + " - " + pageName;
+
     // hide print button
     $('#printButton').hide();
 
