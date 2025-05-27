@@ -65,7 +65,7 @@ function printPage() {
         $(this).hide();
     });
 
-    // hide borders and resize of textarea elements
+    // hide textarea and add text value of textarea after it
     $('textarea').each(function() {
         var inputValue = $(this).val();
         var textNode = $('<span>').addClass('replacedTextareaText').addClass('text-medium').text(inputValue);
