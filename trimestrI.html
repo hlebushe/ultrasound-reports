@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Trimestrul I</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+<div class="main-border">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <div style="width: 25%"><img src="images/logo.png" height="100" width="100" alt="logo"
+                                      style="-webkit-filter:grayscale(1)"></div>
+        <div style="width: 50%; text-align: center"><h3 style="margin-top: 0">Cabinet medical de ecografie № 203</h3>Echipament: General
+            Electric Versana Premier<br>e-mail: svetlana.ciuclea@gmail.com
+        </div>
+        <div style="width: 25%; text-align: right"><h4>IMSP CS Strășeni</h4>str. Ștefan cel Mare 105, <br>or. Strășeni,
+            Republica Moldova<br>Telefon: (+373) 237 22862
+        </div>
+    </div>
+    <h3 class="title">Raport de examinare ecografică<br> datarea sarcina</h3>
+    <br>
+    <div class="text-medium">
+        <div class="inline-left">
+            Nume, Prenume:
+            <form>
+                <input id="patientFullName" type="text" maxlength="100" size="50">
+            </form>
+        </div>
+        <div class="inline-right">
+            Anul de naștere:
+            <form>
+                <input type="text" size="4">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Adresa:
+            <form>
+                <input type="text" maxlength="100" size="60">
+            </form>
+        </div>
+        <div class="inline-right">
+            Data de examinare:
+            <input id="currentDate" name="date" size="8" tabindex="-1">
+        </div>
+        <br>
+        <div class="inline-left">
+            Condiții technice
+            <select id="technicalConditionsSelect">
+                <option value="bune">adecvate</option>
+                <option value="limitate">limitate prin:</option>
+            </select>
+            <form id="limitedTechnicalConditionsForm" style="display:none">
+                <label><input type="checkbox"/> calitatea țesuturilor anterioare</label>
+            </form>
+        </div>
+    </div>
+    <h4 class="divider">REZULTATE:</h4>
+    <div class="text-medium">
+        <div>
+            Examinare
+            <select>
+                <option>transabdominală</option>
+                <option>transvaginală</option>
+            </select>
+        </div>
+        <div>
+            Prima zi a ultimei menstruații:
+            <input type="text" size="8">
+        </div>
+        <div>
+            Vârsta gestațională
+            <input type="text" size="2"> săptămîni
+            <input type="text" size="2"> zile amenoree
+        </div>
+        <div>
+            Sarcina
+            <select>
+                <option>termen mic</option>
+                <option>monoembrională</option>
+                <option>gemelară</option>
+            </select>
+        </div>
+        <div>
+            Localizare
+            <label><input type="checkbox"/>
+                intrauterină
+                <select>
+                    <option>în segmentul superior</option>
+                    <option>în segmentul mediu</option>
+                    <option>în segmentul inferior</option>
+                    <option>în zona cicatrice postcezarian</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                ectopică
+                <select>
+                    <option>pe dreapta</option>
+                    <option>pe stângă</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox"/>
+                Diametru mediu intern sacului gestațional
+                <input type="text" size="2">
+                mm, corespunde
+                <input type="text" size="2"> săptămîni
+                <input type="text" size="2"> zile amenoree
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox"/>
+                CRL embrionului
+                <input type="text" size="2">
+                mm, corespunde
+                <input type="text" size="2"> săptămîni
+                <input type="text" size="2"> zile amenoree
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox"/>
+                Anembrionie
+            </label>
+        </div>
+        <div>
+            Sacul vitelin
+            <select>
+                <option>cu diametru</option>
+                <option>nu se vizualizează la moment</option>
+                <option>cu aspect compromis</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="4"> mm
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox"/>
+                Morfologie embrion
+                <select>
+                    <option>normală pentru vârsta gestațională respectivă</option>
+                    <option>cu modificări suspecte</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            Mișcările cordului fetal
+            <select>
+                <option>prezente</option>
+                <option>absente</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="2"> bpm
+            </label>
+        </div>
+        <div>
+            Mișcări embrionale
+            <select>
+                <option>prezente</option>
+                <option>nu se determină la moment</option>
+            </select>
+        </div>
+        <div>
+            Cavitatea amniotică
+            <select>
+                <option>cu aspect normal</option>
+                <option>cu aspect compromis</option>
+            </select>
+        </div>
+        <div>
+            Corion localizat
+            <select>
+                <option>în segmentul superior</option>
+                <option>în segmentul mediu</option>
+                <option>în segmentul inferior</option>
+                <option>în zona cicatrice postcezarian</option>
+            </select>
+        </div>
+        <div>
+            Colecții lichidiene patologice intrauterine
+            <select>
+                <option>nu se determină la moment</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="48">
+        </div>
+        <div>
+            Lungimea canalului cervical
+            <input type="text" size="2">
+            mm
+        </div>
+        <div>
+            Corpul uterin
+            <select>
+                <option>fără modificări evidente</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="48">
+        </div>
+        <div>
+            Ovarul drept
+            <select>
+                <option>aspect tipic</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="48">
+        </div>
+        <div>
+            Ovarul stâng
+            <select>
+                <option>aspect tipic</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="48">
+        </div>
+    </div>
+
+    <h4 class="divider">CONCLUZIE SONOGRAFICĂ:</h4>
+    <div class="text-medium">
+        <div class="inline-left">
+            Ecoscopic:
+            <label><input type="checkbox"/>
+                Sarcina uterină termen mic.
+            </label>
+            <label><input type="checkbox"/>
+                Sarcina uterină monoembrională în evoluție ce corespunde
+                <input type="text" size="2"> săptămîni
+                <input type="text" size="2"> zile amenoree.
+            </label>
+            <label><input type="checkbox"/>
+                Sarcina uterină oprită în evoluție la
+                <input type="text" size="2"> săptămîni
+                <input type="text" size="2"> zile amenoree.
+            </label>
+            <label><input type="checkbox"/>
+                Sarcina ectopică pe dreapta
+                <input type="text" maxlength="1000" size="48">.
+            </label>
+            <label><input type="checkbox"/>
+                Sarcina ectopică pe stânga
+                <input type="text" maxlength="1000" size="48">.
+            </label>
+            <label><input type="checkbox"/>
+                Anembrionie
+                <input type="text" maxlength="1000" size="48">.
+            </label>
+
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+        <br>
+        În prealabil, consințământul verbal a fost obținut.
+    </div>
+
+    <br>
+    <div style="width: 900px; height: 1px"></div>
+    <textarea name="recomandari" rows="0" cols="118"></textarea>
+    <br>
+    Ecografia efectuată de: <br>
+    <b>Dr. Andrienco Svetlana</b><br>
+    Medic ecograf - imagistică medicală categoria superioară
+    <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
+
+</div>
+</body>
+</html>
