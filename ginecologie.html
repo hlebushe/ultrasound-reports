@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ginecologie</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+<div class="main-border">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <div style="width: 25%"><img src="images/logo.png" height="100" width="100" alt="logo"
+                                      style="-webkit-filter:grayscale(1)"></div>
+        <div style="width: 50%; text-align: center"><h3 style="margin-top: 0">Cabinet medical de ecografie № 203</h3>Echipament: General
+            Electric Versana Premier<br>e-mail: svetlana.ciuclea@gmail.com
+        </div>
+        <div style="width: 25%; text-align: right"><h4>IMSP CS Strășeni</h4>str. Ștefan cel Mare 105, <br>or. Strășeni,
+            Republica Moldova<br>Telefon: (+373) 237 22862
+        </div>
+    </div>
+    <h3 class="title">Raport de examinare ecografică<br> organelor bazinului mic</h3>
+    <br>
+    <div class="text-medium">
+        <div class="inline-left">
+            Nume, Prenume:
+            <form>
+                <input id="patientFullName" type="text" maxlength="100" size="50">
+            </form>
+        </div>
+        <div class="inline-right">
+            Anul de naștere:
+            <form>
+                <input type="text" size="4">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Adresa:
+            <form>
+                <input type="text" maxlength="100" size="60">
+            </form>
+        </div>
+        <div class="inline-right">
+            Data de examinare:
+            <input id="currentDate" name="date" size="8" tabindex="-1">
+        </div>
+        <br>
+        <div class="inline-left">
+            Condiții technice
+            <select id="technicalConditionsSelect">
+                <option value="bune">adecvate</option>
+                <option value="limitate">limitate prin:</option>
+            </select>
+            <form id="limitedTechnicalConditionsForm" style="display:none">
+                <label><input type="checkbox"/> aerocolie excesivă; </label>
+                <label><input type="checkbox"/> calitatea țesuturilor anterioare </label>
+            </form>
+        </div>
+        <div>
+            Examinat
+            <select>
+                <option>transabdominal</option>
+                <option>transvaginal</option>
+                <option>mixt</option>
+            </select>
+        </div>
+        <div>
+            Data ultimei menstruații:
+            <label><input type="checkbox"/> <input type="text" size="8"></label>
+            <label><input type="checkbox"/> postmenopauză</label>
+            <label><input type="checkbox"/> amenoree lactațională</label>
+        </div>
+    </div>
+    <h4 class="divider">UTERUL:</h4>
+    <div class="text-medium">
+        <div>
+            Poziție
+            <select>
+                <option>anteflexio-versio</option>
+                <option>retroflexio-versio</option>
+                <option>mezoflexio-versio</option>
+            </select>
+        </div>
+        <div>
+            Forma
+            <select>
+                <option>piriformă</option>
+                <option>ovalară</option>
+                <option>globuloasă</option>
+                <option>bicorn</option>
+            </select>
+        </div>
+        <div>
+            Contur
+            <select>
+                <option>regulat</option>
+                <option>boselat</option>
+            </select>
+        </div>
+        <div>
+            Mobilitate
+            <select>
+                <option>obișnuită</option>
+                <option>redusă</option>
+            </select>
+        </div>
+        <div>
+            Dimensiuni: Axul longitudinal
+            <input type="text" size="2">
+            mm, antero-posterior
+            <input type="text" size="2">
+            mm, transvers
+            <input type="text" size="2">
+            mm
+        </div>
+        <div>
+            Miometru cu ecogenitate
+            <select>
+                <option>medie</option>
+                <option>sporită</option>
+                <option>redusă</option>
+                <option>mixtă</option>
+            </select>
+            ;
+            <label><input type="checkbox"/> cu sectoare reflectogene intramural liniare striate;</label>
+            <label><input type="checkbox"/> cu nodul intramural heterogen
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                    <option>fundic</option>
+                </select>
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/> cu nodul intramural heterogen
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                    <option>fundic</option>
+                </select>
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/> cu nodul intramural heterogen
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                    <option>fundic</option>
+                </select>
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/> cu noduli multipli intramurali cu diametru până
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/> cu nodul submucoz
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                </select>
+                <input type="text" size="2">
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+                ;
+            </label>
+            <label><input type="checkbox"/> cu nodul subseroz
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                </select>
+                <input type="text" size="2">
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+                ;
+            </label>
+            <label><input type="checkbox"/>
+                Nodul
+                <select>
+                    <option>anterior</option>
+                    <option>posterior</option>
+                </select>
+                <select>
+                    <option>spre stânga</option>
+                    <option>spre dreapta</option>
+                </select>
+                <input type="text" size="2">
+                mm pe picioruș;
+            </label>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Zona de joncțiune cu contur
+            <select>
+                <option>clar</option>
+                <option>șters</option>
+            </select>
+        </div>
+        <div>
+            Ecou median cu grosimea
+            <input type="text" size="2">
+            mm; structura
+            <select>
+                <option>omogenă</option>
+                <option>neomogenă</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Cavitatea uterină
+            <select>
+                <option>nedilatată</option>
+                <option>dilatată din contul</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Structura endometrului corespunde fazei
+            <select>
+                <option>de proliferare</option>
+                <option>periovulatorie</option>
+                <option>secretorie</option>
+            </select>
+        </div>
+        <div>
+            Colul uterin cu dimensiuni
+            <input type="text" size="2">
+            *
+            <input type="text" size="2">
+            mm; formațiuni chistice
+            <select>
+                <option>absente</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="10">
+        </div>
+        <div>
+            Canal cervical
+            <select>
+                <option>nedilatat</option>
+                <option>dilatat</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+    </div>
+
+    <h4 class="divider">OVARUL DREPT:</h4>
+    <div class="text-medium">
+        <div>
+            Dimensiuni
+            <input type="text" size="2">
+            *
+            <input type="text" size="2">
+            mm; cu conrur
+            <select>
+                <option>regulat</option>
+                <option>șters</option>
+            </select>
+            <label><input type="checkbox"/> cu incluziuni reflectogene punctiforme și liniare</label>
+        </div>
+        <div>
+            Foliculi antrali cu dimensiuni
+            <input type="text" size="2">
+            -
+            <input type="text" size="2">
+            mm;
+            <label><input type="checkbox"/> N > <input type="text" size="2"></label>
+        </div>
+        <div>
+            Folicul dominant
+            <label><input type="checkbox"/>
+                <input type="text" size="2">
+                mm
+            </label>
+            <label><input type="checkbox"/> nu se determină la moment</label>
+        </div>
+        <div>
+            Formațiuni de volum
+            <select>
+                <option>la momentul examinării nu se determină</option>
+                <option>se determină o formațiune lichidiană cu dimensiuni</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="9">
+                mm;
+            </label>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+    </div>
+
+    <h4 class="divider">OVARUL STÂNG:</h4>
+    <div class="text-medium">
+        <div>
+            Dimensiuni
+            <input type="text" size="2">
+            *
+            <input type="text" size="2">
+            mm; cu conrur
+            <select>
+                <option>regulat</option>
+                <option>șters</option>
+            </select>
+            <label><input type="checkbox"/> cu incluziuni reflectogene punctiforme și liniare</label>
+        </div>
+        <div>
+            Foliculi antrali cu dimensiuni
+            <input type="text" size="2">
+            -
+            <input type="text" size="2">
+            mm;
+            <label><input type="checkbox"/> N > <input type="text" size="2"></label>
+        </div>
+        <div>
+            Folicul dominant
+            <label><input type="checkbox"/>
+                <input type="text" size="2">
+                mm
+            </label>
+            <label><input type="checkbox"/> nu se determină la moment</label>
+        </div>
+        <div>
+            Formațiuni de volum
+            <select>
+                <option>la momentul examinării nu se determină</option>
+                <option>se determină o formațiune lichidiană cu dimensiuni</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="9">
+                mm;
+            </label>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+    </div>
+
+    <h4 class="divider">TROMPA UTERINĂ DREAPTA:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>nu se evidențiază</option>
+                <option>e dilatată cu conținut hipoecogen neomogen</option>
+                <option>e dilatată cu conținut hipoecogen omogen</option>
+            </select>
+        </div>
+    </div>
+
+    <h4 class="divider">TROMPA UTERINĂ STÂNGĂ:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>nu se evidențiază</option>
+                <option>e dilatată cu conținut hipoecogen neomogen</option>
+                <option>e dilatată cu conținut hipoecogen omogen</option>
+            </select>
+        </div>
+    </div>
+
+    <h4 class="divider">PARAMETRU DREPT:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>fără modificări suspecte</option>
+                <option>cu vase dilatate până</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="2">
+                mm;
+            </label>
+        </div>
+    </div>
+
+    <h4 class="divider">PARAMETRU STÂNG:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>fără modificări suspecte</option>
+                <option>cu vase dilatate până</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="2">
+                mm;
+            </label>
+        </div>
+    </div>
+
+    <h4 class="divider">SPAȚIU DOUGLAS:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>liber</option>
+                <option>cu conținut lichidian până</option>
+                <option>absent</option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="19">
+            </label>
+        </div>
+    </div>
+
+    <h4 class="divider">CONCLUZIE SONOGRAFICĂ:</h4>
+    <div class="text-medium" style="font-style: italic;">
+        <div class="inline-left">
+            Ecoscopic:
+            <label><input type="checkbox"/>
+                Semne de miom uterin nodular (FIGO -
+                <input type="text" size="1">).
+            </label>
+            <label><input type="checkbox"/>
+                Semne de miom uterin nodular multilocular (FIGO -
+                <input type="text" size="1">).
+            </label>
+            <label><input type="checkbox"/> Semne de adenomioză.</label>
+            <label><input type="checkbox"/>
+                Chist ovarian pe dreapta (O-RADS-<input type="text" size="1">).
+            </label>
+            <label><input type="checkbox"/>
+                Chist ovarian pe stânga (O-RADS-<input type="text" size="1">).
+            </label>
+            <label><input type="checkbox"/>
+                Semne de hidrosalpinx pe dreapta.
+            </label>
+            <label><input type="checkbox"/>
+                Semne de hidrosalpinx pe stânga.
+            </label>
+            <label><input type="checkbox"/>
+                Semne de pelvioperitonită.
+            </label>
+            <label><input type="checkbox"/>
+                Formațiune tubo-ovariană inflamatorie pe dreapta.
+            </label>
+            <label><input type="checkbox"/>
+                Formațiune tubo-ovariană inflamatorie pe stângă.
+            </label>
+            <label><input type="checkbox"/>
+                Formațiune chistică, posibil endometrioidă pe dreapta.
+            </label>
+            <label><input type="checkbox"/>
+                Formațiune chistică, posibil endometrioidă pe stângă.
+            </label>
+            <label><input type="checkbox"/>
+                Semne de boală varice pelvin.
+            </label>
+            <label><input type="checkbox"/>
+                Ovarile cu aspect polichistic.
+            </label>
+            <label><input type="checkbox"/>
+                Fără modificări suspecte.
+            </label>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+        <br>
+        În prealabil, consințământul verbal a fost obținut.
+    </div>
+
+    <br>
+    <div style="width: 900px; height: 1px"></div>
+    <textarea name="recomandari" rows="0" cols="118"></textarea>
+    <br>
+    Ecografia efectuată de: <br>
+    <b>Dr. Andrienco Svetlana</b><br>
+    Medic ecograf - imagistică medicală categoria superioară
+    <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
+
+</div>
+</body>
+</html>
