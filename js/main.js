@@ -11,6 +11,16 @@ $(document).ready(function() {
             $('#limitedTechnicalConditionsForm').show();
         }
     });
+
+    // add absentCheckbox listener
+    $('.absentCheckbox').on('change', function() {
+        // show or hide next div block after checkbox div
+        if ($(this).is(':checked')) {
+            $(this).parent().parent().next('div').hide();
+        } else {
+            $(this).parent().parent().next('div').show();
+        }
+    });
 });
 
 function getCurrentDate() {
