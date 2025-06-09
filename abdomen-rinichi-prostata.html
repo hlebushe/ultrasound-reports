@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Abdomen + Rinichi + Prostata</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+<div class="main-border">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <div style="width: 25%"><img src="images/logo.png" height="100" width="100" alt="logo"
+                                     style="-webkit-filter:grayscale(1)"></div>
+        <div style="width: 50%; text-align: center"><h3 style="margin-top: 0">Cabinet medical de ecografie № 203</h3>Echipament: General
+            Electric Versana Premier<br>e-mail: svetlana.ciuclea@gmail.com
+        </div>
+        <div style="width: 25%; text-align: right"><h4>IMSP CS Strășeni</h4>str. Ștefan cel Mare 105, <br>or. Strășeni,
+            Republica Moldova<br>Telefon: (+373) 237 22862
+        </div>
+    </div>
+    <h3 class="title">Raport de examinare ecografică generală (abdominală + reno-vezicală + bazinul mic)</h3>
+    <br>
+    <div class="text-medium">
+        <div class="inline-left">Nume, Prenume:
+            <form>
+                <input id="patientFullName" type="text" maxlength="100" size="50">
+            </form>
+        </div>
+        <div class="inline-right">Anul de naștere:
+            <form>
+                <input type="text" size="4">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">Adresa:
+            <form>
+                <input type="text" maxlength="100" size="60">
+            </form>
+        </div>
+        <div class="inline-right">Data de examinare: <input id="currentDate" name="date" size="8" tabindex="-1">
+        </div>
+        <br>
+        <div class="inline-left">Condiții technice
+            <select id="technicalConditionsSelect">
+                <option value="bune">adecvate</option>
+                <option value="limitate">limitate prin:</option>
+            </select>
+            <form id="limitedTechnicalConditionsForm" style="display:none">
+                <label><input type="checkbox"/> aerocolie excesivă; </label>
+                <label><input type="checkbox"/> calitatea țesuturilor anterioare </label>
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">FICATUL:</h4>
+    <div class="text-medium">
+        <div class="inline-left">Este situat tipic.</div>
+        <br>
+        <div class="inline-left">
+            Lobul drept:
+            <form>
+                <input type="text" size="4">
+            </form>
+            mm;
+            Lobul stâng:
+            <form>
+                <input type="text" size="4">
+            </form>
+            mm;
+            Lobul caudat:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm
+        </div>
+        <br>
+        <div>
+            Conturul:
+            <label><input type="checkbox"/> regulat</label>
+            <label><input type="checkbox"/> clar</label>
+            <label><input type="checkbox"/> micronodular</label>
+            <label><input type="checkbox"/> macronodular</label>
+            <label><input type="checkbox"/> unghiurile sunt rotunjite</label>
+        </div>
+        <div class="inline-left">
+            Ecostructura:
+            <select>
+                <option>omogenă</option>
+                <option>neomogenă</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            Ecogenitatea:
+            <label><input type="checkbox"/> medie</label>
+            <label><input type="checkbox"/> redusă</label>
+            <label><input type="checkbox"/> ușor sporită difuz</label>
+            <label><input type="checkbox"/> sporită</label>
+            <label><input type="checkbox"/> fără atenuare posterioară a fascicolului ultrasonor</label>
+            <label><input type="checkbox"/> cu atenuare posterioară a fascicolului ultrasonor</label>
+        </div>
+        <div>
+            Desenul vascular
+            <select>
+                <option>nu este modificat</option>
+                <option>este modificat</option>
+            </select>
+        </div>
+        <div class="inline-left">
+            Formațiune de volum:
+            <select>
+                <option>nu se constată la moment</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="48">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Vena porta:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Vena lienalis:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Venele hepatice:
+            <select>
+                <option>nedilatate</option>
+                <option>dilatate</option>
+            </select>
+            ;
+            Vena cava inferior:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm
+        </div>
+        <br>
+        <div class="inline-left">
+            Artera hepatică proprie:
+            <select>
+                <option>nedilatată</option>
+                <option>dilatată</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Hepatocoledoc se vizualizează pe tot parcurs,
+            <form>
+                <input type="text" size="4">
+            </form>
+            mm.
+            Căile biliare intrahepatice segmentare și lobare
+            <select>
+                <option>nedilatate</option>
+                <option>dilatate</option>
+                <option>conturate</option>
+            </select>
+        </div>
+    </div>
+
+    <h4 class="divider">COLECISTUL:</h4>
+    <div class="text-medium">
+        <label><input type="checkbox" class="absentCheckbox"/> Absent chirurgical.</label>
+    </div>
+    <div class="text-medium">
+        <div class="inline-left">
+            Stare
+            <select>
+                <option>a jeun</option>
+                <option>postprandial</option>
+            </select>
+            Localizare tipică
+            <form>
+                <input type="text" size="4">
+            </form>
+            *
+            <form>
+                <input type="text" size="4">
+            </form>
+            mm;
+            <select>
+                <option>nedeformat</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="39">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Pereții
+            <select>
+                <option>neîngroșați</option>
+                <option>îngroșați</option>
+            </select>
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm
+        </div>
+        <br>
+        <div class="inline-left">
+            Colesteroloză
+            <select>
+                <option>nu se constată</option>
+                <option>se constată</option>
+            </select>
+            , polipi
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="44">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Calculi
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Spațiul pericolecistic
+            <select>
+                <option>nemodificat</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">PANCREASUL:</h4>
+    <div class="text-medium">
+        <div class="inline-left">
+            Cefalul:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Corpul:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Coada:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm; Conturul
+            <select>
+                <option>clar regulat</option>
+                <option>șters</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Ecostructura
+            <select>
+                <option>omogenă</option>
+                <option>neomogenă</option>
+            </select>
+            Ecogenitatea
+            <select>
+                <option>medie</option>
+                <option>sporită</option>
+                <option>redusă</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Calcinate
+            <select>
+                <option>nu se constată</option>
+                <option>se constată</option>
+            </select>
+            Ductul Wirsung
+            <select>
+                <option>nedilatat</option>
+                <option>dilatat</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Formațiune de volum
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Spațiul parapancreatic
+            <select>
+                <option>nemodificat</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">SPLINA:</h4>
+    <div class="text-medium">
+        <div class="inline-left">
+            <form>
+                <input type="text" size="4">
+            </form>
+            *
+            <form>
+                <input type="text" size="4">
+            </form>
+            mm;
+            contur regulat, lob accesoriu
+            <select>
+                <option>nu se evidențiază</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="33">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">
+            Ecostructura
+            <select>
+                <option>omogenă</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">COLECȚII LICHIDIENE LIBERE:</h4>
+    <div class="text-medium">
+        <div class="inline-left">
+            <label><input type="checkbox"/> în cavitatea abdominală nu se constată;</label>
+            <label><input type="checkbox"/> în cavitatea pleurală dreaptă nu se constată;</label>
+            <label><input type="checkbox"/> în cavitatea pleurală stângă nu se constată;</label>
+            <label><input type="checkbox"/> în cavitatea abdominală se constată;</label>
+            <label><input type="checkbox"/> în cavitatea pleurală dreaptă se constată;</label>
+            <label><input type="checkbox"/> în cavitatea pleurală stângă se constată</label>
+        </div>
+    </div>
+
+    <h4 class="divider">GANGLIONI LIMFATICI:</h4>
+    <div class="text-medium">
+        <div class="inline-left">
+            Abdominali majorați
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60">
+            </form>
+        </div>
+    </div>
+    <h4 class="divider">RINICHIUL DREPT:</h4>
+    <div class="text-medium">
+        <div>
+            <span>Localizare:</span>
+            <label ><input type="checkbox"/> tipică</label>
+            <label><input type="checkbox"/> ptozat</label>
+            <label><input type="checkbox"/> asimetric</label>
+            <label><input type="checkbox"/>
+                distopie
+                <select>
+                    <option>pelvină</option>
+                    <option>lombară</option>
+                </select>
+            </label>
+        </div>
+        <div class="inline-left">
+            Dimensiunile
+            <form>
+                <input type="text" size="2">
+            </form>
+            *
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Parenchimul:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Conturul:
+            <select>
+                <option>regulat</option>
+                <option>boselat</option>
+                <option>șters</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Diferențierea cortico-medulară:
+            <select>
+                <option>păstrată</option>
+                <option>compromisă</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label><input type="checkbox"/> Sistemul de calice și bazinet nedilatat.</label>
+            <label><input type="checkbox"/> Sistemul de calice și bazinet dilatat până
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm.
+            </label>
+            <label><input type="checkbox"/> Arbore pielonic drept cu modificări indurative.</label>
+            <label><input type="checkbox"/> Ecosemnale reflectogene fără con de umbră acustică.</label>
+        </div>
+        <div class="inline-left">
+            Calculi
+            <select>
+                <option>nu se evidențiază la moment</option>
+                <option>se vizualizează</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <br>
+        <div>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chisturi peripelvicale
+                <form>
+                    <input type="text" size="11">
+                </form>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină angiomiolipomul
+                <form>
+                    <input type="text" size="20">
+                </form>
+            </label>
+        </div>
+        <div class="inline-left">
+            Formațiune solidă / predominant solidă
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">RINICHIUL STÂNG:</h4>
+    <div class="text-medium">
+        <div>
+            Localizare:
+            <label><input type="checkbox"/> tipică</label>
+            <label><input type="checkbox"/> ptozat</label>
+            <label><input type="checkbox"/> asimetric</label>
+            <label><input type="checkbox"/>
+                distopie
+                <select>
+                    <option>pelvină</option>
+                    <option>lombară</option>
+                </select>
+            </label>
+        </div>
+        <div class="inline-left">
+            Dimensiunile
+            <form>
+                <input type="text" size="2">
+            </form>
+            *
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Parenchimul:
+            <form>
+                <input type="text" size="2">
+            </form>
+            mm;
+            Conturul:
+            <select>
+                <option>regulat</option>
+                <option>boselat</option>
+                <option>șters</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            Diferențierea cortico-medulară:
+            <select>
+                <option>păstrată</option>
+                <option>compromisă</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label><input type="checkbox"/> Sistemul de calice și bazinet nedilatat.</label>
+            <label><input type="checkbox"/> Sistemul de calice și bazinet dilatat până
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm.
+            </label>
+            <label><input type="checkbox"/> Arbore pielonic stâng cu modificări indurative.</label>
+            <label><input type="checkbox"/> Ecosemnale reflectogene fără con de umbră acustică.</label>
+        </div>
+        <div class="inline-left">
+            Calculi
+            <select>
+                <option>nu se evidențiază la moment</option>
+                <option>se vizualizează</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <br>
+        <div>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chist intraparenchimatoz cu dimensiuni
+                <form>
+                    <input type="text" size="2">
+                </form>
+                mm în segmentul
+                <select>
+                    <option>superior</option>
+                    <option>mediu</option>
+                    <option>inferior</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină chisturi peripelvicale
+                <form>
+                    <input type="text" size="11">
+                </form>
+            </label>
+            <label><input type="checkbox"/>
+                Se determină angiomiolipomul
+                <form>
+                    <input type="text" size="20">
+                </form>
+            </label>
+        </div>
+        <div class="inline-left">
+            Formațiune solidă / predominant solidă
+            <select>
+                <option>nu se constată</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">URETERUL:</h4>
+    <div class="text-medium">
+        <div>
+            Drept
+            <label><input type="checkbox"/> nedilatat în segmentul superior;</label>
+            <label><input type="checkbox"/> nedilatat în segmentul inferior;</label>
+            <label><input type="checkbox"/> dilatat în segmentul superior;</label>
+            <label><input type="checkbox"/> dilatat în segmentul inferior;</label>
+            <label><input type="checkbox"/> calcul în segmentul superior;</label>
+            <label><input type="checkbox"/> calcul în segmentul inferior;</label>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <div>
+            Stâng
+            <label><input type="checkbox"/> nedilatat în segmentul superior;</label>
+            <label><input type="checkbox"/> nedilatat în segmentul inferior;</label>
+            <label><input type="checkbox"/> dilatat în segmentul superior;</label>
+            <label><input type="checkbox"/> dilatat în segmentul inferior;</label>
+            <label><input type="checkbox"/> calcul în segmentul superior;</label>
+            <label><input type="checkbox"/> calcul în segmentul inferior;</label>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">PROSTATA:</h4>
+    <div class="text-medium">
+        <label><input type="checkbox" class="absentCheckbox"/> Absentă chirurgical.</label>
+    </div>
+    <div class="text-medium">
+        <div>
+            Forma
+            <select>
+                <option>de caștan</option>
+                <option>globuloasă</option>
+                <option>ovalară</option>
+            </select>,
+            <select>
+                <option>simetrică</option>
+                <option>asimetrică</option>
+            </select>
+        </div>
+        <div>
+            Contur
+            <select>
+                <option>regulat</option>
+                <option>șters</option>
+                <option>boselat</option>
+                <option>cu prolabarea în lumenul vezicii urinare</option>
+            </select>
+        </div>
+        <div>
+            Mobilitate
+            <select>
+                <option>obișnuită</option>
+                <option>redusă</option>
+            </select>
+        </div>
+        <div>
+            Dimensiuni: Axul longitudinal
+            <input type="text" size="2">
+            mm, antero-posterior
+            <input type="text" size="2">
+            mm, transvers
+            <input type="text" size="2">
+            mm, volum
+            <input type="text" size="2">
+            ml
+        </div>
+        <div>
+            Ecostructura
+            <select>
+                <option>omogenă</option>
+                <option>neomogenă</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Ecogenitate
+            <select>
+                <option>medie</option>
+                <option>sporită</option>
+                <option>redusă</option>
+            </select>
+        </div>
+        <div>
+            Modificări patologice în zonele centrale
+            <select>
+                <option>nu se determină</option>
+                <option>se determină</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Modificări patologice în zona de tranziție
+            <select>
+                <option>nu se determină</option>
+                <option>se determină</option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Uretra prostatică
+            <select>
+                <option>nemodificată</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            <label><input type="checkbox"/> Se determină</label>
+            <label><input type="checkbox"/>
+                calcifieri solitare până
+                <input type="text" size="2">
+                *
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/>
+                corpii amilacee
+                <select>
+                    <option>solitare</option>
+                    <option>multiple</option>
+                </select>;
+            </label>
+            <label><input type="checkbox"/>
+                formațiuni chistice până
+                <input type="text" size="2">
+                *
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/>
+                formațiuni heterogene la baza prostatei
+                <input type="text" size="2">
+                *
+                <input type="text" size="2">
+                mm;
+            </label>
+            <label><input type="checkbox"/>
+                formațiune heterogenă la baza prostatei
+                <input type="text" size="2">
+                *
+                <input type="text" size="2">
+                mm cu prolabarea în lumenul prostatei până
+                <input type="text" size="2">
+                mm
+            </label>
+            <label><input type="checkbox"/></label>
+        </div>
+        <div>
+            Zona periferică
+            <select>
+                <option>fără modificări de focar hipoecogene</option>
+                <option>cu modificări de focar hipoecogene</option>
+            </select>
+            <label><input type="checkbox"/>
+                până
+                <input type="text" size="2">
+                mm
+            </label>
+            <label><input type="checkbox"/>
+                cu infiltrare în capsula prostatei
+            </label>
+            <label><input type="checkbox"/>
+                fără infiltrare în capsula prostatei
+            </label>
+        </div>
+        <div>
+            Vascularizare
+            <select>
+                <option>fără modificări suspecte</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+    </div>
+
+    <h4 class="divider">VEZICULI SEMINALE:</h4>
+    <div class="text-medium">
+        <div>
+            Cu conrur
+            <select>
+                <option>regulat</option>
+                <option>șters</option>
+            </select>,
+            <select>
+                <option>simetrici</option>
+                <option>asimetrici</option>
+            </select>
+        </div>
+        <div>
+            Formațiuni de volum
+            <select>
+                <option>la momentul examinării nu se determină</option>
+                <option></option>
+            </select>
+            <label><input type="checkbox"/>
+                <input type="text" size="9">
+                mm;
+            </label>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+        <div>
+            Ductele ejaculatoare
+            <select>
+                <option>nu sunt dilatate</option>
+                <option>sunt dilatate</option>
+            </select>
+        </div>
+    </div>
+
+    <h4 class="divider">GANGLIONI LIMFATICI PARAILIACI MAJORATI:</h4>
+    <div class="text-medium">
+        <div>
+            <select>
+                <option>Nu se determină</option>
+                <option></option>
+            </select>
+            <input type="text" maxlength="1000" size="59">
+        </div>
+    </div>
+
+    <h4 class="divider">VEZICA URINARĂ:</h4>
+    <div class="text-medium">
+        <div>
+            Volum:
+            <select>
+                <option>în repleție minimă</option>
+                <option>plină</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <div>
+            Conturul:
+            <select>
+                <option>intern e regulat</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <div class="inline-left">
+            Conținutul cavității
+            <select>
+                <option>nemodificat</option>
+                <option></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+        <div>
+            Urina reziduală:
+            <form>
+                <input type="text" maxlength="1000" size="59">
+            </form>
+        </div>
+    </div>
+
+    <h4 class="divider">CONCLUZIE SONOGRAFICĂ:</h4>
+    <div class="text-medium" style="font-style: italic;">
+        Ecoscopic:
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul ficatului.</label>
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul ficatului (tip steatoza hepatică
+            neseveră).</label>
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul ficatului (tip steatoză hepatică).</label>
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul ficatului (ficat cardiac).</label>
+        <label><input type="checkbox"/> Hemangiom hepatic.</label>
+        <label><input type="checkbox"/> Chist hepatic simplu.</label>
+        <label><input type="checkbox"/> Semne de colecistopatie alitiazică.</label>
+        <label><input type="checkbox"/> Semne de colecistită cronică calculoasă.</label>
+        <label><input type="checkbox"/> Semne de litiază biliară.</label>
+        <label><input type="checkbox"/> Vezica biliară afunctională pe fon de litiază biliară.</label>
+        <label><input type="checkbox"/> Semne de colesteroloză vezicii biliare.</label>
+        <label><input type="checkbox"/> Modificări de forma a vezicii biliare.</label>
+        <label><input type="checkbox"/> Semne de dischinezie a căilor biliare.</label>
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul pancreasului.</label>
+        <label><input type="checkbox"/> Schimbări dufuze în parenchimul pancreasului (tip lipomatoză).</label>
+        <label><input type="checkbox"/> Ascita.</label>
+        <label><input type="checkbox"/> Pleurezie pe dreaptă.</label>
+        <label><input type="checkbox"/> Pleurezie pe stângă.</label>
+        <form>
+            <input type="text" maxlength="1000" size="60">
+        </form>
+        <br>
+        <label><input type="checkbox"/>
+            Semne de proces inflamator renal suportat
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Pieloectazie
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/> Semne de micronefrolitiaza.</label>
+        <label><input type="checkbox"/>
+            Semne de nefrolitiaza
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Semne de hidronefroză pe dreapta gradul
+            <select>
+                <option>1-2</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Semne de hidronefroză pe stânga gradul
+            <select>
+                <option>1-2</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Chist renal
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Chisturi renale
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Chisturi peripelvicale
+            <select>
+                <option>pe dreapta</option>
+                <option>pe stânga</option>
+                <option>bilateral</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Semne de nefropatie
+            <label><input type="checkbox"/> urologică,</label>
+            <label><input type="checkbox"/> discirculatorie,</label>
+            <label><input type="checkbox"/> dismetabolică,</label>
+            <label><input type="checkbox"/> mixtă.</label>
+        </label>
+        <label><input type="checkbox"/>
+            Angiomiolipomul în rinichiul
+            <select>
+                <option>drept</option>
+                <option>stâng</option>
+            </select>
+            .
+        </label>
+        <label><input type="checkbox"/>
+            Semne de boală polichistică renală.
+        </label>
+        <form>
+            <input type="text" maxlength="1000" size="60">
+        </form>
+        <br>
+        <label><input type="checkbox"/> Prostatomegalie.</label>
+        <label><input type="checkbox"/> Hiperplazie nodulară a prostatei.</label>
+        <label><input type="checkbox"/> Modificări în parenchimul prostatei.</label>
+        <label><input type="checkbox"/>
+            Fără modificări suspecte.
+        </label>
+        <form>
+            <input type="text" maxlength="1000" size="60">
+        </form>
+        <br>
+        În prealabil, consințământul verbal a fost obținut.
+    </div>
+
+    <br>
+    <div style="width: 900px; height: 1px"></div>
+    <textarea name="recomandari" rows="0" cols="118"></textarea>
+    <br>
+    Ecografia efectuată de: <br>
+    <b>Dr. Andrienco Svetlana</b><br>
+    Medic ecograf - imagistică medicală categoria superioară
+    <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
+
+</div>
+</body>
+</html>
