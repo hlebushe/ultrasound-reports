@@ -1,4 +1,16 @@
 $(document).ready(function() {
+    // header selection logic
+    const params = new URLSearchParams(window.location.search);
+    const headerType = params.get("header");
+
+    if (headerType === "sante") {
+        document.getElementById("header-default").style.display = "none";
+        document.getElementById("header-sante").style.display = "block";
+    } else {
+        document.getElementById("header-default").style.display = "flex";
+        document.getElementById("header-sante").style.display = "none";
+    }
+
     // populate current date
     document.getElementById('currentDate').value = getCurrentDate();
 
