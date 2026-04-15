@@ -33,6 +33,16 @@ $(document).ready(function() {
             $(this).parent().parent().next('div').show();
         }
     });
+
+    $('.absentCheckboxHideNext2').on('change', function() {
+        const nextDivs = $(this).parent().parent().nextAll('div').slice(0, 2);
+
+        if ($(this).is(':checked')) {
+            nextDivs.hide();
+        } else {
+            nextDivs.show();
+        }
+    });
 });
 
 function getCurrentDate() {
