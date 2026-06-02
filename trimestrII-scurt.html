@@ -1,0 +1,333 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Trimestrul II(III)</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+<div class="main-border">
+{% include header.html %}
+    <h3 class="title">Raport de Examinare<br>a viabilitatii fetale în trimestrul II(III) de sarcină</h3>
+    <br>
+    <div class="text-medium">
+        <div class="inline-left">Nume, Prenume:
+            <form>
+                <input id="patientFullName" type="text" maxlength="100" size="70">
+            </form>
+        </div>
+        <div class="inline-right">Anul de naștere:
+            <form>
+                <input type="text">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">Adresa:
+            <form>
+                <input type="text" maxlength="100" size="70">
+            </form>
+        </div>
+        <div class="inline-right">Data de examinare: <input id="currentDate" name="date" size="8" tabindex="-1">
+        </div>
+        <br>
+        <div class="inline-left">DUM: <input type="text" maxlength="10" size="10"></div>
+        <div class="inline-right">Vârsta gestațională (SA+Z):
+            <b>-LMP-
+                <form><input type="text" maxlength="2" size="2" name="BPD-sapt"></form>
+                SA+
+                <form><input type="text" size="2" name="BPD-sapt"></form>
+                zile</b><br>
+            <b>-AUA-
+                <form><input type="text" size="2" name="BPD-sapt"></form>
+                SA+
+                <form><input type="text" size="2" name="BPD-sapt"></form>
+                zile</b></div>
+        <br><br>
+        <div class="inline-left">Sarcină
+            <select>
+                <option value="unică">unică</option>
+                <option value="multiplă">multiplă</option>
+            </select>
+            <form>
+                <input type="text" maxlength="100" size="90" name="bpm">
+            </form>
+        </div>
+        <br>
+        <div class="inline-left">Bătăile cordului fetal:
+            <form>
+                <input type="text" maxlength="3" size="3" name="bpm">
+            </form>
+            bpm,
+            <select id="test">
+                <option value="ritmice">ritmice</option>
+                <option value="aritmice">aritmice</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">
+            <label><input type="checkbox"/>
+                Prezentație:
+                <select>
+                    <option value="cefalică">cefalică</option>
+                    <option value="pelvină">pelvină</option>
+                    <option value="podalică">podalică</option>
+                </select>
+            </label>
+            <label><input type="checkbox"/>
+                Poziție
+                <select>
+                    <option value="cefalică">transversă</option>
+                    <option value="pelvină">oblică</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div class="inline-left">Mișcările fetale:
+            <select>
+                <option value="active">active</option>
+                <option value="absente">absente</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">Ecografie:
+            <select>
+                <option value="transabdominal">transabdominal</option>
+                <option value="endovaginal acordat">endovaginal acordat</option>
+            </select>
+        </div>
+        <br>
+        <div class="inline-left">Condiții technice
+            <select id="technicalConditionsSelect">
+                <option value="bune">dificile</option>
+                <option value="bune">adecvate</option>
+                <option value="limitate">limitate prin:</option>
+            </select>
+            <form id="limitedTechnicalConditionsForm" style="display:none">
+                <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/>
+                    poziție fetală nefavorabilă; </label>
+                <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/>
+                    placenta localizată anterior; </label>
+                <label><input type="checkbox" name="exces de țesut adipos" value="exces de țesut adipos"/> exces de țesut
+                    adipos </label>
+            </form>
+        </div>
+    </div>
+    <br>
+
+    <h4 class="divider">BIOMETRIE:</h4>
+    <div class="text-medium">
+        <div class="inline-left">Diametrul biparietal (BPD)</div>
+        <div class="padding-right">
+            <form><input type="text" maxlength="5" size="5" name="BPD"></form>
+            mm, corespunde
+            [
+            <form><input type="text" maxlength="2" size="2" name="BPD-sapt"></form>
+            săptămîni amenoree +
+            <form><input type="text" maxlength="1" size="1" name="BPD-zile"></form>
+            zile ]
+        </div>
+        <br>
+        <div class="inline-left">Circumferența craniană (HC)</div>
+        <div class="padding-right">
+            <form><input type="text" maxlength="5" size="5" name="HC"></form>
+            mm, corespunde
+            [
+            <form><input type="text" maxlength="2" size="2" name="HC-sapt"></form>
+            săptămîni amenoree +
+            <form><input type="text" maxlength="1" size="1" name="HC-zile"></form>
+            zile ]
+        </div>
+        <br>
+        <div class="inline-left">Circumferența abdominală (AC)</div>
+        <div class="padding-right">
+            <form><input type="text" maxlength="5" size="5" name="AC"></form>
+            mm, corespunde
+            [
+            <form><input type="text" maxlength="2" size="2" name="AC-sapt"></form>
+            săptămîni amenoree +
+            <form><input type="text" maxlength="1" size="1" name="AC-zile"></form>
+            zile ]
+        </div>
+        <br>
+        <div class="inline-left">Lungimea femurului (FL)</div>
+        <div class="padding-right">
+            <form><input type="text" maxlength="5" size="5" name="FL"></form>
+            mm, corespunde
+            [
+            <form><input type="text" maxlength="2" size="2" name="FL-sapt"></form>
+            săptămîni amenoree +
+            <form><input type="text" maxlength="1" size="1" name="FL-zile"></form>
+            zile ]
+        </div>
+        <br>
+        <div class="inline-left">MPF (HANDLOCK)</div>
+        <div class="padding-right">
+            <form><input type="text" maxlength="5" size="5" name="MPF"></form>
+            gr <label><input type="checkbox"/>± <input type="text" maxlength="5" size="5" name="MPF"></label>, &nbsp;&nbsp; corespunde
+            [
+            <form><input type="text" maxlength="5" size="5" name="MPF-sapt"></form>
+            percentile
+            ]
+        </div>
+    </div>
+    <br>
+
+    <h4 class="divider">ASPECT SONOGRAFIC AL ANATOMIEI FETALE:</h4>
+    <div class="text-medium">
+        Examen dat nu include investigarea anatomiei fetale.
+    </div>
+    <br>
+
+    <h4 class="divider">ANEXELE FETALE:</h4>
+    <div class="text-medium">
+        <i>Placenta: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        - localizare:
+        <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/> peretele
+            posterior; </label>
+        <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> peretele
+            anterior; </label>
+        <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> fundic;
+        </label>
+        <label><input type="checkbox" name="poziție fetală nefavorabilă" value="poziție fetală nefavorabilă"/> lateral pe
+            stânga; </label>
+        <label><input type="checkbox" name="placenta localizată anterior" value="placenta localizată anterior"/> lateral pe
+            dreapta; <br> </label>
+        <div class="padding-right-anatomie">
+            &nbsp;&nbsp; cu extremitatea distală situată la
+            <form>
+                <input size="2" type="text">
+            </form>
+            mm față de orificiul intern al colului uterin
+            <br>
+            - grad de maturizare Grannum -
+            <select>
+                <option>-</option>
+                <option>0</option>
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+            </select>
+            <br>
+            - aspect normal
+            <br>
+            - anomalii structurale
+            <select>
+                <option value="feminin">absente</option>
+                <option value="masculin"></option>
+            </select>
+            <form>
+                <input type="text" maxlength="1000" size="60" name="bpm">
+            </form>
+        </div>
+
+        <i>Cordonul ombilical: </i> &nbsp;&nbsp; - existența a 3 vase (2 artere și o venă)
+        <div class="padding-right-anatomie">
+            - inserția placentară
+            <select>
+                <option value="feminin">excentrică</option>
+                <option value="masculin">marginală</option>
+                <option value="nedeterminat">vasa praevia</option>
+            </select>
+            <br>
+            - circulara cordonului ombilical
+            <select>
+                <option value="feminin">nu se determină</option>
+                <option value="masculin">se determină</option>
+                <option value="nedeterminat">dublă</option>
+            </select>
+        </div>
+        <i>Lichid amniotic: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - indice amniotic
+        <form>
+            <input size="2" type="text" name="HC">
+        </form>
+        mm
+        <div class="padding-right-anatomie">
+            - aspect
+            <select>
+                <option value="feminin">omogen</option>
+                <option value="masculin">cu particuli suspendate</option>
+            </select>
+        </div>
+        <i>Colul uterin: </i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
+        <form>
+            <input size="2" type="text" name="HC">
+        </form>
+        mm, cu orificiul intern închis
+        <div>
+            <label><input type="checkbox">
+                <i>Zona cicatrice postcezarian: </i>
+                <select>
+                    <option>intactă</option>
+                    <option></option>
+                </select>
+                <input type="text" maxlength="1000" size="55">
+            </label>
+        </div>
+    </div>
+    <br>
+
+    <h4 class="divider">CONCLUZIE SONOGRAFICĂ:</h4>
+    <div class="text-medium" style="font-style: italic;">
+        <div>
+            <b><label><input type="checkbox" checked/><b>Creșterea fetală în limitele normalității. </b></label><label><input type="checkbox" checked/>LA normal.</label>
+                <form>
+                    <input type="text" maxlength="1000" size="55" name="bpm">
+                </form>
+            </b>
+        </div>
+        <div>
+            Biometria fetală corespunde vârstei gestaționale de
+            <form>
+                <input size="2" type="text" name="BPD-sapt">
+            </form>
+            săptămîni amenoree +
+            <form>
+                <input size="1" type="text" name="BPD-zile">
+            </form>
+            zile
+        </div>
+        <div>
+            Anomalii evidente nu se constată.
+        </div>
+        <div>
+            <label><input type="checkbox" checked/>
+                <b>Data probabila a nasterii:
+                    <input type="text" maxlength="1000" size="48"></b>
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox" checked/>
+                Mama relatează mișcări fetale bune, care pot fi vizualizate și în timpul scanării.
+            </label>
+        </div>
+        <div>
+            Cuplul este conștient de faptul că singură ecografia nu poate exclude toate sindroamele genetice și anomaliile
+            cromozomiale.
+        </div>
+        <br>
+
+        În prealabil, consințământul verbal a fost obținut.
+    </div>
+    <br>
+    <div style="width: 900px; height: 1px"></div>
+    <textarea name="recomandari" rows="0" cols="118"></textarea>
+    <br>
+    Ecografia efectuată de: <br>
+    <b>Dr. Andrienco Svetlana</b><br>
+    Medic ecograf - imagistică medicală categoria superioară
+    <button onclick="printPage()" id="printButton" style="float:right"> PRINT THIS PAGE</button>
+
+</div>
+</body>
+</html>
